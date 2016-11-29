@@ -1,0 +1,32 @@
+body,div,code,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}
+li,ul{list-style-image:none;list-style-type:none}
+a{font-size:12px;color:#2b2b2b;text-decoration:none}
+a:hover{color:#33b0f0;text-decoration:none}
+fieldset,img,input{border:0;}
+
+.wraper .main_img{margin-top: 20px;margin-left: 10px;}
+.tab_wrap{position: inherit;}
+.tab_wrap .image{overflow: hidden;}
+.tab_wrap .etc_wrap{background: url(../img/opacity.png) repeat;text-align: center;display: none;position: absolute;bottom: 0;left: 0;}
+.tab_wrap .etc_wrap span.dsctxt{padding: 7px 5px 3px 5px;display: block;font-size: 12px;color: #FFFFFF;line-height: 15px;}
+.tab_wrap .etc_wrap span.dsc{padding: 0 5px 5px 5px;display: block;font-size: 12px;color: #FFFFFF;line-height: 15px;}
+.tab_wrap .etc_wrap span.price{padding: 0 5px 7px 5px;display: block;font-size: 12px;color: #FFFFFF;line-height: 15px;font-weight: bold;}
+
+.keyword{margin-top: 40px;margin-left: 10px;height: 220px;}
+.keyword ul li{float: left;}
+.keyword ul li a img{width: 220px;height: 220px;}
+
+.wraper h2{display: block;}
+.wraper h2.list_title{color: #121212;font-size: 20px;text-align: center;height: 25px;line-height: 25px;padding: 50px 0px;}
+
+.goodslist{margin-left: 10px;width: 1146px;overflow: hidden;}
+.goodslist li{float: left;margin: 20px 0;text-align: left;width: 286px;height: 460px;}
+.goodslist li a img{margin-bottom: 14px;}
+.goodslist li p{display: block;width: 240px;line-height: 18px;font-size: 12px;}
+.goodslist li p.GIcon{color: greenyellow;font-weight: bold;font-size: 14px;}
+.goodslist li p.Gtitle a{color: #999999;margin-top: 5px;}
+.goodslist li p.Gname a{color: #000;margin: 10px 0;font-family: 'Exo 2',sans-serif;}
+.goodslist li p.Gprice{color: #000;font-size: 14px;margin-top: 11px;}
+
+hr{margin-left: 10px;}
+.goods_list{margin-bottom: 40px;}

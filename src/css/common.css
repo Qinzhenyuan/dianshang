@@ -1,0 +1,179 @@
+body,div,code,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}
+body{position: relative;}
+li,ul{list-style-image:none;list-style-type:none}
+a{font-size:12px;color:#2b2b2b;text-decoration:none}
+a:hover{color:#33b0f0;text-decoration:none}
+fieldset,img,input{border:0;}
+
+/*************************Header**************************************/
+.header{/*height: 121px;*/overflow: hidden;border-bottom: solid rgb(230,230,230) 1px;}
+.header .logo{display: block;margin: 30px 20px;float: left;}
+.header .top_nav{float: left;width: 390px;height: 30px;margin-left: 90px;padding-top: 80px;}
+.header .top_nav li{float: left;margin-right: 30px;}
+.header .top_nav li a{display: block;width: 100px;height: 30px;line-height: 30px; align-content: flex-start;font-size: 18px;font-weight: bolder;}
+.header .user_menu{display:block;width:280px;float:right; margin:52px 30px 0 0;height:73px;padding-left: 150px;}
+.header .user_menu li{width:90px;text-align:right;height:50px;line-height:50px;float:left}
+.header .user_menu li a{font-size:14px;color:#4d4d4d;font-weight:bold}
+.header .user_menu li span.logins_user{display: none;}
+.header .user_menu li span.logins_a{display: block;}
+
+.left_nav{width: 149px;border-right: solid rgb(230,230,230) 1px;overflow: hidden;float: left;}
+.left_nav ul li a{color: rgb(121,121,121);font-weight: bold;font-size: 14px;}
+.left_nav .event{height: 37px;border-bottom: solid rgb(230,230,230) 1px;}
+.left_nav .event li{height:37px;line-height: 37px;text-align: center;}
+.left_nav .nav{margin-top: 24px;border-bottom: solid rgb(230,230,230) 1px;}
+.left_nav .nav li a{display: block;width: 149px;height: 23px;line-height: 23px;text-align: center;}
+.left_nav .event2 li{border-bottom: solid rgb(230,230,230) 1px;text-align: center;}
+.left_nav .event2 li a{width: 149px;height: 37px;line-height: 37px;}
+
+.wraper{width: 1110px;overflow: hidden;min-height: 1200px;/*height: 1200px;*/margin: 0 auto;border-left: solid rgb(230,230,230) 1px;/*margin-left: 160px;*/}
+
+/*右边nav的样式*/
+.right_nav{position: fixed;right: 0px;top: 121px;width: 101px;/*bottom: 0;*/background: #f4f4f4;}
+.right_nav .right_wraper{position: relative;}
+.right_nav .right_btn{position: absolute;left: -20px;top: 0px;width: 20px;height: 51px;background: #d5d5d5;text-align: center;line-height: 51px;font-size: 16px;}
+.right_nav .quick_menu{width: 101px;border-bottom: #D5D5D5 solid 1px;height: 51px;}
+.right_nav .quick_menu li{display:block;float: left;width: 50px;}
+.right_nav .quick_menu li a{display:block;width: 50px;height: 50px;line-height: 50px;text-align: center;}
+.right_nav .quick_menu li a.reg_btn{background: url(img/reg_btn.png);}
+.right_nav .quick_menu li a.search_btn{background: url(img/search_btn.png);border-left: #d5d5d5 solid 1px;}
+
+.right_nav .users_menu{width: 101px;}
+.right_nav .users_menu li{display: block;border-bottom: #D5D5D5 solid 1px;width: 101px;height: 105px;text-align: center;line-height: 105px;}
+.right_nav .users_menu .logins{background:url(img/user_menu.png) no-repeat left top;}
+.right_nav .users_menu .logins a.login{display: block;width: 40%;float: left;}
+.right_nav .users_menu .logins span.logins_user{display: none;}
+.right_nav .users_menu .logins span.logins_a{display: block;}
+.right_nav .users_menu .logins a.register{display: block;width: 40%;float: right;}
+.right_nav .users_menu .cart{background:url(img/buy_btn.png) no-repeat left top;}
+.right_nav .users_menu .zzim{background:url(img/zzim_btn.png) no-repeat left top;}
+
+.right_nav .help_menu{margin-top: 20px;}
+.right_nav .help_menu li a{display: block;width: 100px;height: 26px;line-height: 26px;text-align: center;overflow: hidden;}
+.right_nav .help_menu li.weixin{position: relative;}
+
+/*微信位置*/
+.right_nav .weixin_pop{display: none;width: 160px; position: absolute;left: -160px;top: -120px;}
+.right_nav .weixin_code{text-align:center;margin:12px 0}
+.right_nav .weixin_txt{text-align:center;width:134px;margin:0 auto 12px auto;padding-top:8px;border-top:#ccc 1px solid}
+.right_nav .weixin_txt .weixin_txt_title{line-height:16px}
+.right_nav .weixin_txt .weixin_txt_title2{line-height:22px;font-size:16px}
+
+.right_nav .promise{display:block;line-height:26px;text-align:center;color:#a7a7a7;padding-top:60px;background:url(img/han.png) no-repeat center 10px;margin-top: 10px;}
+.right_nav .top_btn{position:fixed;right:0;bottom:0;width:101px;height:34px;background:#d5d5d5;text-align:center;color:#000}
+.right_nav .top_btn span{display:inline-block;border-top:3px solid #000;height:30px;line-height:30px;font-size:16px}
+
+.guarantee{text-align: center;margin: 20px 0 65px 0;}
+/*底部样式*/
+.footer{overflow: hidden;border-top: #D5D5D5 solid 1px;}
+.footer .footer_top{width:1100px;margin:0 auto;padding:60px 0 30px 0;height: 224px;border-bottom: #D5D5D5 solid 1px;}
+.footer .footer_top .footer_top_contact{width:444px;float:left;border-right:#CCC 1px solid}
+.footer .footer_top .footer_top_contact .tel p{color: #d5d5d5;line-height: 22px;}
+.footer .footer_top .footer_top_contact .work_time,.footer .footer_top .footer_top_contact .address{font-weight:bold;line-height:18px;margin-top:18px}
+.footer .footer_top .footer_top_contact .copyright{line-height:18px;margin-top:18px;color:#999;font-size: 12px;}
+.footer .footer_top .footer_top_help{float: left;width: 655px;}
+.footer .footer_top .footer_top_help .help_top{overflow: hidden;}
+.help_top .help_top_detail{float: left;margin-left: 40px;color: #D5D5D5;}
+.help_top .help_top_detail ul{margin-top: 40px;}
+.help_top .help_top_detail ul li{line-height: 24px;}
+
+.help_bottom_email{width: 380px;margin: 40px 0 0 40px; float: left;font-weight: bold;}
+.help_bottom_email a{color:#fff;background:#999;display:inline-block;line-height:46px;font-weight:bold;padding:0 8px;border-radius: 5px;}
+.help_bottom_email input{width:145px;border:#ccc solid 1px;height:16px;padding:14px 15px;color:#999}
+
+.nums{width:200px;height:44px;border:#ccc 1px solid;float:right;color:#999;margin-top:40px;font-size: 14px;}
+.nums li{height:22px;line-height:22px;margin-left:20px}
+.nums li em{margin:0 10px;font-size:14px;font-style:normal}
+
+.footer_bottom img{width: 125;height: 42px;}
+.footer_bottom{padding:20px 0 20px 110px;}
+/*吸顶菜单样式*/
+.top_bar{position: fixed;left: 0;top: 0;width: 100%;min-width: 1261px;background: #393939;font-weight: bold;overflow: hidden;display: none;}
+.top_bar a.indexs{display: block;width: 160px;font-size: 34px;float: left;}
+.top_bar ul{float: right;}
+.top_bar ul li{font-size: 14px;float: left;padding: 13px 16px;border-left: #D5D5D5 solid 1px;}
+.top_bar a{color: #EFEFEF;}
+
+/*登录/注册样式*/
+.pop_Alpha{position: fixed;left: 0;top: 0;width: 100%;height: 100%;opacity: 0.5;filter:alpha(opacity=0.5);background: black;display: none;}
+.pop_login{position: fixed;left: 50%;top: 50%;width: 580px;/*height: 260px;*/background: #FFFFFF;padding: 60px 90px;margin-left: -370px;margin-top: -190px;display: none;}
+.pop_login_wraper{position: relative;}
+.pop_login_wraper .pop_login_close{position: absolute;width: 36px;height: 36px;line-height: 36px;background: url(img/close.png);right: -108px;top: -78px;}
+
+.reg_login,.reg_register,.register_pt,.register_wholesale,.login_pt,.login_wholesale{display: none;}
+
+.reg_select{width: 520px;height: 46px;border: #000000 solid 1px;}
+.reg_select li{float: left;display: block;width: 260px;}
+.reg_select li a{display: block;height: 46px;line-height: 46px;text-align: center;font-size: 14px;}
+.reg_select li.cur a{background: #000000; color: #FFFFFF;}
+
+.pop_login_attention{width:520px;height:32px;line-height:32px;border:#e2e2e2 1px solid;font-size:14px;text-indent:15px;background:#eee;color:#6f6f6f;margin-top:20px}
+.pop_login_attention strong{color: #2B2B2B;}
+
+.pop_login_box .pop_login_form{width: 520px;margin: 10px 0 25px 0;overflow: hidden;height: 100px;}
+.pop_login_form .pop_login_input{float: left;width: 410px;}
+.pop_login_form .pop_login_submit{float: left;width: 110px;}
+.pop_login_form .pop_login_input div{height: 35px;}
+.pop_login_form .pop_login_input div.pwd_input{margin-top: 10px;}
+.pop_login_box .pop_login_form input{padding-left: 10px;border: #E2E2E2 solid 1px;height: 35px;width: 388px;}
+.pop_login_box .pop_login_submit{display: block;width: 110px;height: 78px;text-align: center;line-height: 78px;background: #000000;color: #FFFFFF;font-size: 24px;font-weight: bold;}
+
+.pop_login_tip{width: 520px;overflow: hidden;}
+.pop_login_tip .save{float: left;width: 120px;font-size: 14px;}
+.pop_login_tip .save label{cursor: pointer;}
+.pop_login_tip .save input{margin-top: 4px;}
+.pop_login_tip .login_item{float: right;text-align: right;width: 300px;}
+.pop_login_tip .login_item a{color: #6F6F6F;font-size: 14px;}
+.pop_login_tip .login_item a.register{color: #000;font-size: 16px;font-weight: bold;}
+/*普通会员注册*/
+.pop_register_form{width: 520px;margin-top: 18px;}
+.pop_register_form .pop_register_input{width: 410px;float: left;/*overflow: hidden;*/}
+.pop_register_form .pop_register_submit{float: left;display: block;width: 110px;height: 52px;text-align: center;padding: 55px 0;font-size: 24px;font-weight: bold;background: #000000;color: #FFFFFF;}
+.pop_register_form .pop_register_submit em{font-size: 12px;}
+
+.pop_register_form .pop_register_input .pop_register_item{height: 42px;line-height: 42px;position: relative;}
+.pop_register_form .pop_register_input .pop_register_item div{float: left;width: 50%;/*height: 42px;line-height: 42px;*/}
+.pop_register_form .pop_register_item div input{width: 182px;border: #E2E2E2 solid 1px;height: 35px;padding-left: 10px;line-height: 35px;}
+.pop_register_form .pop_register_item input.txtgb{width: 388px;border: #E2E2E2 solid 1px;height: 35px;padding-left: 10px;line-height: 35px;}
+.pop_register_form .pop_register_item div.input_code input{width: 80px;border: #E2E2E2 solid 1px;height: 35px;float: left;margin-left: 10px;line-height: 35px;margin-top: 5px;}
+.pop_register_form .pop_register_item div.input_code span{float: left;width: 80px;display: block;border: #E2E2E2 solid 1px;height: 35px;line-height: 35px;font-size: 18px;margin-top: 5px;font-weight: bolder;text-align: center;}
+.pop_register_form .pop_register_item div select{width: 182px;height: 35px;border: #E2E2E2 solid 1px;line-height: 35px;color: #9C9C9C;}
+.pop_register_item div.pwd_error,.pop_register_item div.sex_error,.pop_register_item div.code_error{position: absolute;width: 180px;color: #f00;font-size: 18px;right: 0;top: 42px;background: #888888;z-index: 100;}
+.pop_register_form .pop_register_item div.phone_error{position: absolute;width: 180px;color: #f00;font-size: 18px;left: 0;top: 42px;background: #888888;z-index: 100;}
+.pop_register_form .pop_register_item div.txt_error{position: absolute;width: 388px;color: #f00;font-size: 18px;left: 0;top: 42px;background: #888888;z-index: 100;}
+
+.pop_register_tip{width: 520px;overflow: hidden;margin-top: 20px;}
+.pop_register_tip .agree{float: left;width: 300px;font-size: 14px;}
+.pop_register_tip .agree a{font-size: 14px;}
+.pop_register_tip .pop_login_reg{float: right;text-align: right;width: 100px;}
+.pop_register_tip .pop_login_reg a{color: #000000;font-size: 16px;font-weight: bold;text-decoration: underline;}
+/*批发会员注册*/
+.wholesale_step{width: 580px;margin: 5px 0 5px -25px;height: 110px;}
+.wholesale_step div{float: left;margin-left: 10px;border: #E2E2E2 solid 1px;text-align: center;padding: 20px;background: #EEEEEE;font-size: 12px;}
+.wholesale_step div span{font-size:12px;}
+.wholesale_step div strong{display:block;font-size:12px;line-height:24px}
+.wholesale_step div a{color:#e0a2ac}
+
+.pop_wholesale_input{width: 532px;}
+.pop_wholesale_input .pop_wholesale_item{height: 42px;line-height: 42px;position: relative;}
+.pop_wholesale_input .pop_wholesale_address{height:42px;line-height:40px;font-size:14px;color:#ccc;margin: 5px 0;}
+.pop_wholesale_input .pop_wholesale_address select{width:138px;height:34px;line-height:24px;padding:7px 0 7px 10px;border:#ccc 1px solid;font-size:14px;color:#9c9c9c;margin-right:15px}
+.pop_wholesale_input .pop_wholesale_item div{float: left;width: 50%;/*height: 42px;line-height: 42px;*/}
+.pop_wholesale_item div input{width: 244px;border: #E2E2E2 solid 1px;height: 35px;padding-left: 10px;line-height: 35px;}
+.pop_wholesale_item input.txtgb,.pop_wholesale_item input.detailaddrbg{width: 532px;border: #E2E2E2 solid 1px;height: 35px;padding-left: 10px;line-height: 35px;}
+.pop_wholesale_item div.input_code{margin-top: 4px;}
+.pop_wholesale_item div.input_code input{width: 80px;border: #E2E2E2 solid 1px;height: 35px;float: left;margin-left: 10px;line-height: 35px;}
+.pop_wholesale_item div.input_code span{float: left;width: 80px;display: block;border: #E2E2E2 solid 1px;height: 35px;line-height: 35px;font-size: 18px;font-weight: bolder;text-align: center;}
+.pop_wholesale_item div select{width: 275px;height: 35px;border: #E2E2E2 solid 1px;line-height: 35px;color: #9C9C9C;}
+.pop_wholesale_input div.pop_wholesale_reg{margin-top: 30px;width: 532px;}
+.pop_wholesale_input div.pop_wholesale_reg a{display: block;width:200px;height:46px;line-height:46px;background:#000;text-align:center;font-size:14px;color:#FFF;text-decoration:none;margin:18px auto}
+.pop_wholesale_item div.sex_error,.pop_wholesale_item div.code_error,.pop_wholesale_item div.pwd_error{position: absolute;width: 180px;color: #f00;font-size: 18px;right: 0;top: 42px;background: #888888;z-index: 100;}
+.pop_wholesale_item div.phone_error{position: absolute;width: 180px;color: #f00;font-size: 18px;left: 0;top: 42px;background: #888888;z-index: 100;}
+.pop_wholesale_item div.txt_error,.pop_wholesale_item div.address_error,.pop_wholesale_item div.detailaddr_error{position: absolute;width: 388px;color: #f00;font-size: 18px;left: 0;top: 42px;background: #888888;z-index: 100;}
+
+.pop_wholesale_tip{width: 532px;overflow: hidden;margin-top: 20px;}
+.pop_wholesale_tip .agree{float: left;width: 300px;font-size: 14px;}
+.pop_wholesale_tip .agree a{font-size: 14px;}
+.pop_wholesale_tip .pop_login_reg{float: right;text-align: right;width: 100px;}
+.pop_wholesale_tip .pop_login_reg a{color: #000000;font-size: 16px;font-weight: bold;text-decoration: underline;}
+

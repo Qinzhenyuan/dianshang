@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>详情页面</title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/details.css"/>
+		<link rel="stylesheet" type="text/css" href="../assets/lzoom/jquery.lzoom.css"/>
+		<script src="../assets/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/jQuery.lcommon.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/detail.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/lzoom/jquery.lzoom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cookie_register.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cookie_login.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			jQuery(function ($) {
+				var urls = "detail.html";
+				lcommon();		
+				details();
+				listcart();
+				cookie_register(urls);
+				cookie_login(urls);
+				
+			});
+		</script>
+	</head>
+	<body>
+		<!--------------------------header头部------------------------------------>
+		<div class="header">
+			<a class="logo" href="../index.html"><img src="../img/logo.png"/></a>
+			<ul id="top_nav" class="top_nav">
+				<li class="ladies"><a href="index.html">女装区</a></li>
+				<li class="men"><a href="index.html">男装区</a></li>
+				<li class="cosmetic"><a href="index.html">美妆区</a></li>
+			</ul>
+			<ul id="user_menu" class="user_menu">
+				<li><a href="#" class="login">登录</a>/<a class="register">注册</a></li>
+				<li class="cart"><a href="Cart.html">购物车(<span>0</span>)</a></li>
+				<li class="zzim"><a>暂存架(<span>0</span>)</a></li>
+			</ul>
+		</div>
+		<!--------------------------left_Nav左边菜单------------------------------------>
+		<div id="left_nav" class="left_nav">
+			<ul class="event">
+				<li><a href="list.html">品论赢积分</a></li>
+			</ul>
+			<ul class="nav">
+				<li class="new"><a href="list.html">最新商品</a></li>
+				<li><a href="list.html">一周爆款</a></li>
+				<li><a href="list.html">热卖商品</a></li>
+				<li><a href="list.html">最佳口碑</a></li>
+			</ul>
+			<ul class="nav">
+				<li><a href="list.html">上衣</a></li>
+				<li><a href="list.html">衬衫&罩衫</a></li>
+				<li><a href="list.html">外套</a></li>
+				<li><a href="list.html">半身裙</a></li>
+				<li><a href="list.html">连衣裙</a></li>
+				<li><a href="list.html">裤装</a></li>
+				<li><a href="list.html">鞋&包</a></li>
+				<li><a href="list.html">配饰</a></li>
+				<li><a href="list.html">内衣</a></li>
+				<li><a href="list.html">SUMMER</a></li>
+				<li><a href="list.html">美妆</a></li>
+			</ul>
+			<ul class="event2">
+				<li><a href="list.html">明星赞助</a></li>
+				<li><a href="list.html">专题&活动</a></li>
+			</ul>
+		</div>
+		<!--------------------------wraper主体------------------------------------>
+		<div id="wraper" class="wraper">
+			<div class="goodview_nav">
+				<a href="#">韩国女装</a> > <a href="#">上衣</a> > <a href="#">针织衫</a> > <!--<span class="">★限量发售★ 百搭麻花辫针织T恤</span>-->
+			</div>
+			<div class="goodview_item">
+				<div class="goodlist_img">
+					<!--<img src="../img/hot_33.jpg"/>-->
+				</div>
+				<div class="goodlist_detail">
+					<div class="goods_title">
+						<!--<strong class="Gname">Twisted Knit Tee</strong>
+						<p class="Gtitle">★한정수량★ 매치하기 좋은 꽈배기 니트티 !</p>
+						<p class="Gtitle">★限量发售★ 百搭麻花辫针织T恤</p>
+						<span class="GIcon">New!</span>-->
+					</div>
+					<p class="interfree">韩国直邮 100元免国际配送费</p>
+					<div class="member_price">
+						钻石会员 ¥125 / 宝石会员 ¥128 / 翡翠会员 ¥131 / 水晶会员 ¥133<a>查看会员规则</a>
+					</div>
+					<div class="goods_form">
+						<form action="" method="post">
+							<div>
+								<span class="sell_title">售价：</span>
+								<div class="sell_content">
+									<strong></strong><!--<span class="sell_price"> ¥ 136 </span>-->
+									<span class="emoney">（积分 ¥ <strong></strong>）</span>
+								</div>
+							</div>
+							<div>
+								<span class="sell_title">颜色：</span>
+								<div class="sell_content">
+									<select name="gcolor" class="gcolor">
+										<option value="蓝色">蓝色</option>
+										<option value="灰色">灰色</option>
+										<option value="红棕色">红棕色</option>
+									</select>
+								</div>
+							</div>
+							<div>
+								<span class="sell_title">尺寸：</span>
+								<div class="sell_content">
+									<select name="gsize" class="gsize">
+										<option value="ONE SIZE">ONE</option>
+										<option value="TWO SIZE">TWO</option>
+									</select>
+								</div>
+							</div>
+							<div class="Gqty">
+								<span class="sell_title">数量：</span>
+								<div class="sell_content">
+									<input type="text" name="Gqty" id="" value="1" maxlength="3" class="goodsnum"/>
+									<a class="reduce">-</a>
+									<a class="plus">+</a>
+								</div>
+							</div>
+							<div class="good_buy">
+								<a class="myzzim_btn">放入暂存架</a>
+								<a class="cart_btn">加入购物车</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="goods_nav_list">
+				<a href="#">
+					<span class="en">details</span>
+					<br />
+					<span class="cn">商品描述</span>
+				</a>
+				<b>|</b>
+				<a href="#">
+					<span class="en">size info</span>
+					<br />
+					<span class="cn">商品信息</span>
+				</a>
+				<b>|</b>
+				<a href="#">
+					<span class="en">coordinate</span>
+					<br />
+					<span class="cn">相关商品</span>
+				</a>
+				<b>|</b>
+				<a href="#">
+					<span class="en">review</span>
+					<br />
+					<span class="cn">商品评论/咨询</span>
+				</a>
+				<b>|</b>
+				<a href="#">
+					<span class="en">distribution</span>
+					<br />
+					<span class="cn">配送/退货</span>
+				</a>
+			</div>
+			<ul class="goods_detail_list">
+				<li>
+					<div class="goods_info">
+						<div>
+							<p><span><strong>엠버 미니 테슬 클러치</strong></span></p>
+							<p><br /><span>- 컬러감으로 앙증맞음을 더한 미니 클러치 입니다</span></p>
+							<p><br /><span>- 폴리에스테르 100% 소재로 제작되었습니다</span></p>
+							<p><br /><span>- 탈부착이 가능한 스트랩이 있어서 미니 크로스백으로 귀엽게 연출하실 수 있습니다</span></p>
+							<p><br /><span>- 브라운,블랙 2컬러 구성입니다</span></p>
+							<p><br /><span>- 앙증맞은 디자인으로 하나쯤 소장하고 계시면 포인트로 룩을 손 쉽게 완성하실 수 있습니다</span></p>
+							<p>
+								<br />
+								<span>
+									<strong>
+										착용모델 : 정희
+										<br />
+										착용컬러 : 블랙,브라운
+										<br />
+										착용 사이즈 : ONE SIZE
+									</strong>
+								</span>
+							</p>
+						</div>
+						<div>
+							<p><span>♥♥♥时尚迷你流苏亮点设计的包包</span></p>
+							<p><br /><span>♥♥♥时尚百搭的色调，迷你手拿包包产品</span></p>
+							<p><br /><span>♥♥♥复纤脂100%的材质制作而成</span></p>
+							<p><br /><span>♥♥♥可以拆卸，可爱的风格</span></p>
+							<p><br /><span>♥♥♥准备了棕色，黑色可以选择</span></p>
+							<p><br /><span>♥♥♥基本百搭设计款式，值得收藏的产品</span></p>
+							<p><br /><span>郑曦：黑色 棕色 均码</span></p>
+						</div>
+					</div>	
+					<div class="goods_img">
+						<img src="../img/D693792_x1.jpg"/>
+						<img src="../img/D693792_x2.jpg"/>
+						<img src="../img/D693792_x3.jpg"/>
+						<img src="../img/D693792_x4.jpg"/>
+						<img src="../img/D693792_x5.jpg"/>
+						<img src="../img/D693792_x6.jpg"/>
+						<img src="../img/D693792_x7.jpg"/>
+						<img src="../img/D693792_x8.jpg"/>
+						<img src="../img/D693792_n.jpg"/>
+						<img src="../img/D693792_s4.jpg"/>
+					</div>
+				</li>
+				<li>
+					<h3>
+						<span class="en">size info</span>
+						<br />
+						<span class="cn">商品信息</span>
+					</h3>
+					<div class="size_info">
+						<div class="goods_Material">
+							<div class="material_detail">
+								<div class="material_title">关于退货</div>
+								<div class="material_item">可退货</div>
+							</div>
+							<div class="material_detail">
+								<div class="material_title">面料/材质</div>
+								<div class="material_item">富纤酯100%</div>
+							</div>
+							<div class="material_detail">
+								<div class="material_title">透光度</div>
+								<div class="material_item">
+									<span>透</span>
+									<span>轻微透</span>
+									<span>不透</span>
+								</div>
+							</div>
+							<div class="material_detail">
+								<div class="material_title">厚度</div>
+								<div class="material_item">
+									<span>厚</span>
+									<span>适中</span>
+									<span>薄</span>
+								</div>
+							</div>
+							<div class="material_detail">
+								<div class="material_title">有否内衬</div>
+								<div class="material_item">
+									<span>有内衬</span>
+									<span>无内衬</span>
+								</div>
+							</div>
+							<div class="material_detail">
+								<div class="material_title">弹性情况</div>
+								<div class="material_item">
+									<span>有弹性</span>
+									<span>微弹性</span>
+									<span>无弹性</span>
+								</div>
+							</div>
+						</div>
+						<div class="size_detail">
+							<img src="../img/124_cn.jpg"/>
+						</div>
+					</div>
+					<table border="0" cellspacing="1" cellpadding="3" width="860" align="center" bgcolor="#E6E6E6">
+						<tbody>
+							<tr>
+								<td width="100" height="30" align="center" bgcolor="#F4F4F4" valign="middle">&nbsp;</td>
+								<td width="100" align="center" bgcolor="#F4F4F4" valign="middle">宽</td>
+								<td width="100" align="center" bgcolor="#F4F4F4" valign="middle">长</td>
+								<td width="100" align="center" bgcolor="#F4F4F4" valign="middle">背带长度</td>
+							</tr>
+							<tr>
+								<td width="100" height="30" align="center" bgcolor="#F4F4F4" valign="middle">ONESIZE</td>
+								<td width="100" align="center" bgcolor="#FFFFFF" valign="middle">22</td>
+								<td width="100" align="center" bgcolor="#FFFFFF" valign="middle">13.5</td>
+								<td width="100" align="center" bgcolor="#FFFFFF" valign="middle">68~122</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="wash_detail">
+						
+					</div>
+					<h3>
+						<span class="en">model info</span>
+						<br />
+						<span class="cn">模特信息</span>
+					</h3>
+					<div class="model_img">
+						<img src="../img/270_cn.JPEG"/>
+					</div>
+				</li>
+				<li>
+					<h3>
+						<span class="en">coordinate</span>
+						<br />
+						<span class="cn">相关商品</span>
+					</h3>
+					<ul class="saleList">
+						<li>
+							<a href="#"><img class="Gpic" src="../img/D693798_d.jpg"/></a>
+							<p class="GIcon"><span></span></p>
+							<p class="Gtitle"><a href="#">귀여운 패턴으로 시선집중 폰케이스!!</a></p>
+							<p class="Gtitle"><a href="#">可爱印图亮点，集中视线!!</a></p>
+							<p class="Gname"><a href="#">Caracter IPhone Case</a></p>
+							<p class="Gamount">售价:100 元</p>
+						</li>
+						<li>
+							<a href="#"><img class="Gpic" src="../img/D693705_d.jpg"/></a>
+							<p class="GIcon"><span>HOT!</span></p>
+							<p class="Gtitle"><a href="#">만능코디를 책임지는 데님 롱~ 스커트!!</a></p>
+							<p class="Gtitle"><a href="#">时尚百搭，牛仔布材质，长版型半身裙~!!</a></p>
+							<p class="Gname"><a href="#">High Waist Button Maxi Demin Skirt</a></p>
+							<p class="Gamount">售价:205 元</p>
+						</li>
+					</ul>
+				</li>
+				<li id="review">
+					<div class="review_box">
+						<div class="review_title">
+							<div class="review_count">
+								商品评论-中国 ( <span id="review_count">2</span> )
+							</div>
+							<div class="review_tip">只要你的评论真实、客观，就有机会获得1-5个积分！（请到我的账户确认已收货之后发表）</div>
+						</div>
+						<div class="review_main">
+							<ul>
+								<li>
+									<div class="review_lists">
+										<div class="lists_time">2016/09/21</div>
+										<div class="lists_title"><a href="#"> 不错的</a></div>
+										<div class="lists_writer">queenna-**</div>
+									</div>
+									<div class="review_detail">
+										<div class="review_size">
+											尺寸：ONE SIZE&nbsp;&nbsp;&nbsp;颜色：A
+										</div>
+										<div class="review_content">
+											在泰国贴了，好看
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_lists">
+										<div class="lists_time">2016/09/21</div>
+										<div class="lists_title"><a href="#"> 不错的</a></div>
+										<div class="lists_writer">queenna-**</div>
+									</div>
+									<div class="review_detail">
+										<div class="review_size">
+											尺寸：ONE SIZE&nbsp;&nbsp;&nbsp;颜色：A
+										</div>
+										<div class="review_content">
+											在泰国贴了，好看
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="lists_page">
+							
+						</div>
+						<a href="#" class="review_btn">评论</a>
+					</div>
+					<div class="review_box">
+						<div class="review_title">
+							<div class="review_count">
+								商品评论-韩国 ( <span id="review_count">2</span> )
+							</div>
+						</div>
+						<div class="review_main">
+							<ul>
+								<li>
+									<div class="review_lists">
+										<div class="lists_time">2016/09/21</div>
+										<div class="lists_title"><a href="#"> 이쁘게 잘 쓰겠씁니다.</a></div>
+										<div class="lists_writer">viki07**</div>
+									</div>
+									<div class="review_detail">
+										<div class="review_size">
+											尺寸：ONE SIZE&nbsp;&nbsp;&nbsp;颜色：B
+										</div>
+										<div class="review_content">
+											맘에 쏙 들어요~<br />이쁘게 잘 쓰겠씁니다.
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_lists">
+										<div class="lists_time">2016/09/21</div>
+										<div class="lists_title"><a href="#"> 이쁘게 잘 쓰겠씁니다.</a></div>
+										<div class="lists_writer">viki07**</div>
+									</div>
+									<div class="review_detail">
+										<div class="review_size">
+											尺寸：ONE SIZE&nbsp;&nbsp;&nbsp;颜色：B
+										</div>
+										<div class="review_content">
+											맘에 쏙 들어요~<br />이쁘게 잘 쓰겠씁니다.
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="lists_page">
+							
+						</div>
+						<a href="#" class="review_btn">提问</a>
+					</div>
+					<div class="review_box">
+						<div class="review_title">
+							<div class="review_count">
+								商品咨询 ( <span id="review_count">2</span> )
+							</div>
+							<div class="review_tip">解答关于商品的所有问题，仅限于商品相关信息的咨询，与商品无关的留言以及广告一律删除</div>
+						</div>
+						<div class="review_main">
+							<ul>
+								<li>
+									<div class="review_lists">
+										<div class="lists_time">2016/09/21</div>
+										<div class="lists_title"><a href="#"> 不错的</a></div>
+										<div class="lists_writer">queenna-**</div>
+									</div>
+									<div class="review_detail">
+										<div class="review_size">
+											尺寸：ONE SIZE&nbsp;&nbsp;&nbsp;颜色：A
+										</div>
+										<div class="review_content">
+											在泰国贴了，好看
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_lists">
+										<div class="lists_time">2016/09/21</div>
+										<div class="lists_title"><a href="#"> 不错的</a></div>
+										<div class="lists_writer">queenna-**</div>
+									</div>
+									<div class="review_detail">
+										<div class="review_size">
+											尺寸：ONE SIZE&nbsp;&nbsp;&nbsp;颜色：A
+										</div>
+										<div class="review_content">
+											在泰国贴了，好看
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="lists_page">
+							
+						</div>
+					</div>
+				</li>
+				<li>
+					<h3>
+						<span class="en">distribution</span>
+						<br />
+						<span class="cn">配送/退货</span>
+					</h3>
+					<ul class="distribution_list">
+						<li>
+							<div class="distribution_list_info">
+								<div class="distribution_list_title">
+									配送方式：
+								</div>
+								<div class="distribution_list_detail">
+									圆通国际
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="distribution_list_info">
+								<div class="distribution_list_title">
+									配送时间：
+								</div>
+								<div class="distribution_list_detail">
+									直购商品是由韩国直接配送给会员，配送时间为3-6个工作日，<br />不排除通关物流节假日等其它异常原因导致的订单延迟，不作为最终承诺哦~
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="distribution_list_info">
+								<div class="distribution_list_title">
+									退货须知：
+								</div>
+								<div class="distribution_list_detail">
+									自签收之日起7日内（以快递公司的送货单上的签收日期为准）提交退货，<br />
+									并将商品（包括吊牌）连同包装盒内的发货单（如有赠品连同赠品）一并寄还到时尚起义，才能为您安排退货。<br />
+									并将商品（包括吊牌）连同包装盒内的发货单（如有赠品连同赠品）一并寄还到时尚起义，才能为您安排退货。<br />
+									以及无任何穿着痕迹、或洗涤痕迹， 配送费由自己承担。
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!--------------------------right_Nav------------------------------------>
+		<div class="right_nav" id="right_nav">
+			<div id="right_wraper" class="right_wraper">
+				<a id="right_btn" class="right_btn">></a>
+				<ul class="quick_menu">
+					<li><a class="reg_btn"></a></li>
+					<li><a class="search_btn"></a></li>
+				</ul>
+				<ul class="users_menu">
+					<li class="logins"><a href="#" class="login">登录</a>/<a class="register">注册</a></li>
+					<li class="cart"><a href="Cart.html">购物车(<span>0</span>)</a></li>
+					<li class="zzim"><a>暂存架(<span>0</span>)</a></li>
+				</ul>
+				<ul class="help_menu">
+					<li><a class="history_btn">今日浏览</a></li>
+					<li class="weixin">
+						<a class="weixin_btn">关注微信</a>
+						<div class="weixin_pop" id="weixin_pop">
+							<div class="weixin_code">
+								<img src="../css/img/weixin_code.jpg"/>
+							</div>
+							<div class="weixin_txt">
+								<p class="weixin_txt_title1">关注时尚起义官方微信</p>
+								<p class="weixin_txt_title2"><strong>潮流&折扣早知道</strong></p>
+							</div>
+						</div>
+					</li>
+					<li><a>常见问题</a></li>
+					<li><a>1:1留言答复</a></li>
+				</ul>
+				<strong class="promise">100%正品保证<br/>100%韩国直邮<br/>100%售后服务</strong>
+				<a id="top_btn" class="top_btn"><span>Top</span></a>
+			</div>
+		</div>
+		<!--------------------------guarantee------------------------------------>
+		<div id="guarantee" class="guarantee">
+			<img src="../img/guarantee.jpg"/>
+		</div>
+		<!--------------------------footer------------------------------------>
+		<div id="footer" class="footer">
+			<div class="footer_top">
+				<div class="footer_top_contact">
+					<div class="tel">
+						<p>CALL CENTER</p>
+						<h2>400-818-4371</h2>
+					</div>
+					<div class="work_time">
+						8:00AM-17:00PM / 午休 12:00PM-13:00PM
+						<br />
+						周六日、法定节假日休息
+					</div>
+					<div class="address">
+						退货地址：上海市闵行区万源路2158号 泓毅大厦413室
+						<br />
+						邮编：201103
+					</div>
+					<div class="copyright">
+						<p class="copyrighr_p">上海智桓市场营销策划有限公司 / 网站经营许可证号 沪ICP备06036963号</p>
+					</div>
+				</div>
+				<div class="footer_top_help">
+					<div class="help_top">
+						<div class="help_top_detail">
+							<h3>新手上路</h3>
+							<ul>
+								<li><a> > 怎样下订单</a></li>
+								<li><a> > 会员等级制度</a></li>
+								<li><a> > 积分&优惠券</a></li>
+							</ul>
+						</div>
+						<div class="help_top_detail">
+							<h3>关于订购</h3>
+							<ul>
+								<li><a> > 支付方式</a></li>
+								<li><a> > 配送时间</a></li>
+								<li><a> > 配送费用</a></li>
+							</ul>
+						</div>
+						<div class="help_top_detail">
+							<h3>帮助中心</h3>
+							<ul>
+								<li><a> > 找回密码</a></li>
+								<li><a> > 常见问题</a></li>
+								<li><a> > 公告栏</a></li>
+							</ul>
+						</div>
+						<div class="help_top_detail">
+							<h3>售后服务</h3>
+							<ul>
+								<li><a> > 退货政策</a></li>
+								<li><a> > 退货申请</a></li>
+								<li><a> > 留言&回复</a></li>
+							</ul>
+						</div>
+						<div class="help_top_detail">
+							<h3>关于我们</h3>
+							<ul>
+								<li><a> > 平台介绍</a></li>
+								<li><a> > 联系我们</a></li>
+								<li><a> > 加入我们</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="help_bottom">
+						<div class="help_bottom_email">
+							<a>我要女装</a>
+							<a>我要男装</a>
+							<input type="text" name="" id="" value="" placeholder="订阅我们的邮件"/>
+							<a>订阅</a>
+						</div>
+						<ul class="nums">
+							<li> · 新商品数量<em>300</em>件</li>
+							<li> · 热卖商品数量<em>3000</em>件</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<a><img src="../css/img/alipay.jpg"/></a>
+				<a><img src="../css/img/cert.png"/></a>
+				<a><img src="../css/img/cnnic.png"/></a>
+				<a><img src="../css/img/12377.jpg"/></a>
+				<a><img src="../css/img/12377_app.jpg"/></a>
+				<a><img src="../css/img/direct.jpg"/></a>
+				<a><img src="../css/img/charge.jpg"/></a>
+				<a><img src="../css/img/quality.jpg"/></a>
+			</div>
+		</div>
+		<!--------------------------top_nav吸顶菜单------------------------------------>
+		<div id="top_bar" class="top_bar">
+			<a class="indexs" href="../index.html">shishangqiyi</a>
+			<ul>
+				<li><a href="list.html">最新商品</a></li>
+				<li><a href="list.html">一周爆款</a></li>
+				<li><a href="list.html">上衣</a></li>
+				<li><a href="list.html">衬衫&罩衫</a></li>
+				<li><a href="list.html">外套</a></li>
+				<li><a href="list.html">半身裙</a></li>
+				<li><a href="list.html">连衣裙</a></li>
+				<li><a href="list.html">裤装</a></li>
+				<li><a href="list.html">鞋&包</a></li>
+				<li><a href="list.html">配饰</a></li>
+				<li><a href="list.html">内衣</a></li>
+				<li><a href="list.html">SUMMER</a></li>
+				<li><a href="list.html">美妆</a></li>
+				<li><a href="list.html">热卖商品</a></li>
+				<li><a href="list.html">最佳口碑</a></li>
+			</ul>
+		</div>
+		<!--------------------------login登录与注册------------------------------------>
+		<div class="pop_Alpha"></div>
+		<div class="pop_login">
+			<div class="pop_login_wraper">
+				<a class="pop_login_close"></a>
+				<ul class="pop_login_box">
+					<!--登录-->
+					<li class="reg_login">
+						<ul class="reg_select">
+							<li class="cur"><a>普通会员登录</a></li>
+							<li><a>批发会员登录</a></li>
+						</ul>
+						<ul>
+							<!--普通会员登录-->
+							<li class="login_pt">
+								<form method="post">
+									<div class="pop_login_attention">
+										<strong>注意！</strong>普通会员和批发会员帐户不共享，请知晓！
+									</div>
+									<div class="pop_login_form">
+										<div class="pop_login_input">
+											<div>
+												<input type="text" name="userid" id="" value="" size="30" maxlength="40" class="text" tabindex="1" placeholder="电子邮件"/>
+											</div>
+											<div class="pwd_input">
+												<input type="password" name="pwd_login" id="" value="" maxlength="15" size="30" class="pwd" tabindex="2" placeholder="您的密码"/>
+											</div>
+										</div>
+										<a class="pop_login_submit">登录</a>
+									</div>
+									<div class="pop_login_tip">
+										<div class="save">
+											<label>
+												<input type="checkbox" name="save" id="save" value="" />保存电子邮件
+											</label>
+										</div>
+										<div class="login_item">
+											<!--跳转到注册-->
+											<a class="register" id="register">新用户注册</a>|
+											<a>忘记密码</a>|
+											<a>支付宝登录</a>
+										</div>
+									</div>
+								</form>
+							</li>
+							<!--批发会员登录-->
+							<li class="login_wholesale">
+								<form method="post">
+									<div class="pop_login_attention">
+										<strong>注意！</strong>普通会员和批发会员帐户不共享，请知晓！
+									</div>
+									<div class="pop_login_form">
+										<div class="pop_login_input">
+											<div>
+												<input type="text" name="userid" id="" value="" size="30" maxlength="40" class="text" tabindex="1" placeholder="电子邮件"/>
+											</div>
+											<div class="pwd_input">
+												<input type="password" name="pwd_login" id="" value="" maxlength="15" size="30" class="pwd" tabindex="2" placeholder="您的密码"/>
+											</div>
+										</div>
+										<a class="pop_login_submit">登录</a>
+									</div>
+									<div class="pop_login_tip">
+										<div class="save">
+											<label>
+												<input type="checkbox" name="save" id="save" value="" />保存电子邮件
+											</label>
+										</div>
+										<div class="login_item">
+											<a class="register" id="register">新用户注册</a>|
+											<a>忘记密码</a>
+										</div>
+									</div>
+								</form>
+							</li>
+						</ul>
+					</li>
+					<!--注册-->
+					<li class="reg_register">
+						<ul class="reg_select">
+							<li class="cur"><a>普通会员注册</a></li>
+							<li><a>批发会员注册</a></li>
+						</ul>
+						<ul class="reg_frm">
+							<!--普通会员注册-->
+							<li class="register_pt">
+								<form method="post" name="regform">
+									<div class="pop_register_form">
+										<div class="pop_register_input">
+											<div class="pop_register_item">	
+												<input type="text" name="email" value="" maxlength="30" class="txtgb" placeholder="电子邮件"/>
+												<div class="txt_error">
+													
+												</div>
+											</div>
+											<div class="pop_register_item">
+												<div>
+													<input type="password" name="pass" id="" value="" class="pwdbg" placeholder="您的密码"/>
+												</div>
+												<div>
+													<input type="password" name="reg_pass" id="" value="" class="reg_pwdbg" placeholder="确认密码"/>
+												</div>
+												<div class="pwd_error">
+													
+												</div>
+											</div>
+											<div class="pop_register_item">
+												<div>
+													<input type="text" name="name" id="" value="" class="namebg" placeholder="用户名"/>
+												</div>
+												<div>
+													<select name="sex" class="selectbg">
+														<!--<option value="">性别</option>-->
+														<option value="F">女</option>
+														<option value="M">男</option>
+													</select>
+												</div>
+												<div class="sex_error">
+													
+												</div>
+											</div>
+											<div class="pop_register_item">
+												<div>
+													<input type="text" name="cphone" id="" value="" class="cphonebg" maxlength="11" placeholder="手机号码"/>
+												</div>
+												<div class="input_code">
+													<span id="" class="safe"></span>
+													<input type="text" name="code" id="" value="" class="codebg" placeholder="验证码"/>
+												</div>
+												<div class="code_error">
+													
+												</div>
+												<div class="phone_error">
+													
+												</div>
+											</div>
+											<div class="pop_register_tip">
+												<div class="agree">
+													<input type="checkbox" name="agreement" id="" value="" checked="checked"/> 我已阅读并同意《<a href="#">时尚起义用户使用条款</a>》
+												</div>
+												<div class="pop_login_reg">
+													<a class="login">老用户登录</a>
+												</div>
+											</div>
+										</div>
+										<a class="pop_register_submit">注册<br/><em>(送5元现金)</em></a>
+									</div>
+								</form>
+							</li>
+							<!--批发会员注册-->
+							<li class="register_wholesale">
+								<div class="wholesale_step">
+									<div>
+										<span>①</span>
+										<strong>填写会员信息</strong>请如实填写信息<br />便于联系
+									</div>
+									<div>
+										<span>②</span>
+										<strong>发送资料</strong>发送身份证、营业执照或店铺地址至<br /><a href="mailto:shishangqiyi_2010@126.com">shishangqiyi_2010@126.com</a> (注明注册ID)
+									</div>
+									<div>
+										<span>③</span>
+										<strong>客服审核</strong>请耐心等待审核<br />审核通过即可登录
+									</div>
+								</div>
+								<form method="post" name="regform_wholesale">
+									<div class="pop_wholesale_input">
+										<div class="emailcheckstr"></div>
+										<div class="pop_wholesale_item">	
+											<input type="text" name="email" value="" maxlength="30" class="txtgb" placeholder="电子邮件"/>
+											<div class="txt_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_item">
+											<div>
+												<input type="password" name="pass" id="" value="" class="pwdbg" placeholder="您的密码"/>
+											</div>
+											<div>
+												<input type="password" name="reg_pass" id="" value="" class="reg_pwdbg" placeholder="确认密码"/>
+											</div>
+											<div class="pwd_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_item">
+											<div>
+												<input type="text" name="name" id="" value="" class="namebg" placeholder="用户名"/>
+											</div>
+											<div>
+												<select name="sex" class="selectbg">
+													<option value="F">女</option>
+													<option value="M">男</option>
+												</select>
+											</div>
+											<div class="sex_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_item">
+											<div>
+												<input type="text" name="cphone" id="" value="" class="cphonebg" maxlength="11" placeholder="手机号码"/>
+											</div>
+											<div class="input_code">
+												<span id="" class="safe"></span>
+												<input type="text" name="code" id="" value="" class="codebg" placeholder="验证码"/>
+											</div>
+											<div class="code_error">
+												
+											</div>
+											<div class="phone_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_item">
+											地区范围
+											<select name="selstate" class="address">
+												<option value="no" selected="selected">请选择</option>
+												<option value="no">---------</option>
+												<option value="广东省">广东省</option>
+												<option value="广西省">广西省</option>
+											</select>
+											<div class="address_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_item">
+											<input type="text" name="detailaddr" id="" value="" class="detailaddrbg" placeholder="您的详细地址"/>
+											<div class="detailaddr_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_tip">
+											<div class="agree">
+												<input type="checkbox" name="agreement" id="" value="" checked="checked"/> 我已阅读并同意《<a href="#">时尚起义用户使用条款</a>》
+											</div>
+											<div class="pop_login_reg">
+												<a class="login">老用户登录</a>
+											</div>
+										</div>
+										<div class="pop_wholesale_reg">
+											<a class="pop_wholesale_submit">批发会员注册</a>
+										</div>
+									</div>
+								</form>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

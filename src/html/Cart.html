@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>购物车页面</title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/cart.css"/>
+		<script src="../assets/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/jQuery.lcommon.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cookie_register.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cookie_login.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cart.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			jQuery(function ($) {
+				var urls = "Cart.html";
+				lcommon();
+				listcart();
+				goodsCart();
+				clicks();	
+				cookie_register(urls);
+				cookie_login(urls);
+			});
+		</script>
+	</head>
+	<body>
+		<!--------------------------header头部------------------------------------>
+		<div class="header">
+			<a class="logo" href="../index.html"><img src="../img/logo.png"/></a>
+			<ul id="top_nav" class="top_nav">
+				<li class="ladies"><a href="index.html">女装区</a></li>
+				<li class="men"><a href="index.html">男装区</a></li>
+				<li class="cosmetic"><a href="index.html">美妆区</a></li>
+			</ul>
+			<ul id="user_menu" class="user_menu">
+				<li><a href="#" class="login">登录</a>/<a class="register">注册</a></li>
+				<li class="cart"><a href="Cart.html">购物车(<span>0</span>)</a></a></li>
+				<li class="zzim"><a>暂存架(<span>0</span>)</a></li>
+			</ul>
+		</div>
+		<!--------------------------left_Nav左边菜单------------------------------------>
+		<div id="left_nav" class="left_nav">
+			<ul class="event">
+				<li><a href="list.html">品论赢积分</a></li>
+			</ul>
+			<ul class="nav">
+				<li class="new"><a href="list.html">最新商品</a></li>
+				<li><a href="list.html">一周爆款</a></li>
+				<li><a href="list.html">热卖商品</a></li>
+				<li><a href="list.html">最佳口碑</a></li>
+			</ul>
+			<ul class="nav">
+				<li><a href="list.html">上衣</a></li>
+				<li><a href="list.html">衬衫&罩衫</a></li>
+				<li><a href="list.html">外套</a></li>
+				<li><a href="list.html">半身裙</a></li>
+				<li><a href="list.html">连衣裙</a></li>
+				<li><a href="list.html">裤装</a></li>
+				<li><a href="list.html">鞋&包</a></li>
+				<li><a href="list.html">配饰</a></li>
+				<li><a href="list.html">内衣</a></li>
+				<li><a href="list.html">SUMMER</a></li>
+				<li><a href="list.html">美妆</a></li>
+			</ul>
+			<ul class="event2">
+				<li><a href="list.html">明星赞助</a></li>
+				<li><a href="list.html">专题&活动</a></li>
+			</ul>
+		</div>
+		<!--------------------------wraper主体------------------------------------>
+		<div id="wraper" class="wraper">
+			<h1>我的购物车</h1>
+			<div class="cart_content_title">
+				<div class="goods_detail">商品信息</div>
+				<div class="goods_price">商品单价</div>
+				<div class="goods_emoney">积分</div>
+				<div class="goods_qty">数量</div>
+				<div class="goods_sum">小计</div>
+			</div>
+			<!--购物车中商品列表-->
+			<div class="cart_body">
+				
+			</div>
+			<div class="cart_result">
+				<div class="cart_Operation">
+					<input type="checkbox" name="SelectAll_K" id="" value="" checked="checked"/>全选
+				</div>
+				<div class="result_main">
+					<div class="list_k">
+						<div class="result_title">商品金额</div>
+						<div class="result_detail">¥&nbsp;<span class="cart_price"></span></div>
+					</div>
+					<div class="hdyh_k">
+						<div class="result_title">会员优惠</div>
+						<div class="result_detail">¥&nbsp;<span class="cart_price"></span></div>
+					</div>
+					<div class="hyyh_k">
+						<div class="result_title">支付金额(不含配送费)</div>
+						<div class="result_detail">¥&nbsp;<span class="cart_price"></span></div>
+					</div>
+				</div>
+			</div>
+			<div class="step_select">
+				<a href="#" class="step_next">马上结算</a>
+				<a href="#" class="step_prev">返回首页</a>
+			</div>
+		</div>
+		<!--------------------------right_Nav右边菜单------------------------------------>
+		<div class="right_nav" id="right_nav">
+			<div id="right_wraper" class="right_wraper">
+				<a id="right_btn" class="right_btn">></a>
+				<ul class="quick_menu">
+					<li><a class="reg_btn" href="#"></a></li>
+					<li><a class="search_btn" href="#"></a></li>
+				</ul>
+				<ul class="users_menu">
+					<li class="logins"><a href="#" class="login">登录</a>/<a href="#" class="register">注册</a></li>
+					<li class="cart"><a href="">购物车(<span>0</span>)</a></li>
+					<li class="zzim"><a href="">暂存架(<span>0</span>)</a></li>
+				</ul>
+				<ul class="help_menu">
+					<li><a class="history_btn" href="#">今日浏览</a></li>
+					<li class="weixin">
+						<a class="weixin_btn" href="#">关注微信</a>
+						<div class="weixin_pop" id="weixin_pop">
+							<div class="weixin_code">
+								<img src="../css/img/weixin_code.jpg"/>
+							</div>
+							<div class="weixin_txt">
+								<p class="weixin_txt_title1">关注时尚起义官方微信</p>
+								<p class="weixin_txt_title2"><strong>潮流&折扣早知道</strong></p>
+							</div>
+						</div>
+					</li>
+					<li><a>常见问题</a></li>
+					<li><a>1:1留言答复</a></li>
+				</ul>
+				<strong class="promise">100%正品保证<br/>100%韩国直邮<br/>100%售后服务</strong>
+				<a id="top_btn" class="top_btn"><span>Top</span></a>
+			</div>
+		</div>
+		<!--------------------------guarantee------------------------------------>
+		<div id="guarantee" class="guarantee">
+			<img src="../img/guarantee.jpg"/>
+		</div>
+		<!--------------------------footer底部------------------------------------>
+		<div id="footer" class="footer">
+			<div class="footer_top">
+				<div class="footer_top_contact">
+					<div class="tel">
+						<p>CALL CENTER</p>
+						<h2>400-818-4371</h2>
+					</div>
+					<div class="work_time">
+						8:00AM-17:00PM / 午休 12:00PM-13:00PM
+						<br />
+						周六日、法定节假日休息
+					</div>
+					<div class="address">
+						退货地址：上海市闵行区万源路2158号 泓毅大厦413室
+						<br />
+						邮编：201103
+					</div>
+					<div class="copyright">
+						<p class="copyrighr_p">上海智桓市场营销策划有限公司 / 网站经营许可证号 沪ICP备06036963号</p>
+					</div>
+				</div>
+				<div class="footer_top_help">
+					<div class="help_top">
+						<div class="help_top_detail">
+							<h3>新手上路</h3>
+							<ul>
+								<li><a> > 怎样下订单</a></li>
+								<li><a> > 会员等级制度</a></li>
+								<li><a> > 积分&优惠券</a></li>
+							</ul>
+						</div>
+						<div class="help_top_detail">
+							<h3>关于订购</h3>
+							<ul>
+								<li><a> > 支付方式</a></li>
+								<li><a> > 配送时间</a></li>
+								<li><a> > 配送费用</a></li>
+							</ul>
+						</div>
+						<div class="help_top_detail">
+							<h3>帮助中心</h3>
+							<ul>
+								<li><a> > 找回密码</a></li>
+								<li><a> > 常见问题</a></li>
+								<li><a> > 公告栏</a></li>
+							</ul>
+						</div>
+						<div class="help_top_detail">
+							<h3>售后服务</h3>
+							<ul>
+								<li><a> > 退货政策</a></li>
+								<li><a> > 退货申请</a></li>
+								<li><a> > 留言&回复</a></li>
+							</ul>
+						</div>
+						<div class="help_top_detail">
+							<h3>关于我们</h3>
+							<ul>
+								<li><a> > 平台介绍</a></li>
+								<li><a> > 联系我们</a></li>
+								<li><a> > 加入我们</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="help_bottom">
+						<div class="help_bottom_email">
+							<a>我要女装</a>
+							<a>我要男装</a>
+							<input type="text" name="" id="" value="" placeholder="订阅我们的邮件"/>
+							<a>订阅</a>
+						</div>
+						<ul class="nums">
+							<li> · 新商品数量<em>300</em>件</li>
+							<li> · 热卖商品数量<em>3000</em>件</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<a><img src="../css/img/alipay.jpg"/></a>
+				<a><img src="../css/img/cert.png"/></a>
+				<a><img src="../css/img/cnnic.png"/></a>
+				<a><img src="../css/img/12377.jpg"/></a>
+				<a><img src="../css/img/12377_app.jpg"/></a>
+				<a><img src="../css/img/direct.jpg"/></a>
+				<a><img src="../css/img/charge.jpg"/></a>
+				<a><img src="../css/img/quality.jpg"/></a>
+			</div>
+		</div>
+		<!--------------------------top_nav吸顶菜单------------------------------------>
+		<div id="top_bar" class="top_bar">
+			<a class="indexs" href="../index.html">shishangqiyi</a>
+			<ul>
+				<li><a href="list.html">最新商品</a></li>
+				<li><a href="list.html">一周爆款</a></li>
+				<li><a href="list.html">上衣</a></li>
+				<li><a href="list.html">衬衫&罩衫</a></li>
+				<li><a href="list.html">外套</a></li>
+				<li><a href="list.html">半身裙</a></li>
+				<li><a href="list.html">连衣裙</a></li>
+				<li><a href="list.html">裤装</a></li>
+				<li><a href="list.html">鞋&包</a></li>
+				<li><a href="list.html">配饰</a></li>
+				<li><a href="list.html">内衣</a></li>
+				<li><a href="list.html">SUMMER</a></li>
+				<li><a href="list.html">美妆</a></li>
+				<li><a href="list.html">热卖商品</a></li>
+				<li><a href="list.html">最佳口碑</a></li>
+			</ul>
+		</div>
+		<!--------------------------login登录注册------------------------------------>
+		<div class="pop_Alpha"></div>
+		<div class="pop_login">
+			<div class="pop_login_wraper">
+				<a class="pop_login_close"></a>
+				<ul class="pop_login_box">
+					<!--登录-->
+					<li class="reg_login">
+						<ul class="reg_select">
+							<li class="cur"><a>普通会员登录</a></li>
+							<li><a>批发会员登录</a></li>
+						</ul>
+						<ul>
+							<li class="login_pt">
+								<form method="post">
+									<div class="pop_login_attention">
+										<strong>注意！</strong>普通会员和批发会员帐户不共享，请知晓！
+									</div>
+									<div class="pop_login_form">
+										<div class="pop_login_input">
+											<div>
+												<input type="text" name="userid" id="" value="" size="30" maxlength="40" class="text" tabindex="1" placeholder="电子邮件"/>
+											</div>
+											<div class="pwd_input">
+												<input type="password" name="pwd_login" id="" value="" maxlength="15" size="30" class="pwd" tabindex="2" placeholder="您的密码"/>
+											</div>
+										</div>
+										<a class="pop_login_submit">登录</a>
+									</div>
+									<div class="pop_login_tip">
+										<div class="save">
+											<label>
+												<input type="checkbox" name="save" id="save" value="" />保存电子邮件
+											</label>
+										</div>
+										<div class="login_item">
+											<a class="register" id="register">新用户注册</a>|
+											<a>忘记密码</a>|
+											<a>支付宝登录</a>
+										</div>
+									</div>
+								</form>
+							</li>
+							<li class="login_wholesale">
+								<form method="post">
+									<div class="pop_login_attention">
+										<strong>注意！</strong>普通会员和批发会员帐户不共享，请知晓！
+									</div>
+									<div class="pop_login_form">
+										<div class="pop_login_input">
+											<div>
+												<input type="text" name="userid" id="" value="" size="30" maxlength="40" class="text" tabindex="1" placeholder="电子邮件"/>
+											</div>
+											<div class="pwd_input">
+												<input type="password" name="pwd_login" id="" value="" maxlength="15" size="30" class="pwd" tabindex="2" placeholder="您的密码"/>
+											</div>
+										</div>
+										<a class="pop_login_submit">登录</a>
+									</div>
+									<div class="pop_login_tip">
+										<div class="save">
+											<label>
+												<input type="checkbox" name="save" id="save" value="" />保存电子邮件
+											</label>
+										</div>
+										<div class="login_item">
+											<a class="register" id="register">新用户注册</a>|
+											<a>忘记密码</a>
+										</div>
+									</div>
+								</form>
+							</li>
+						</ul>
+					</li>
+					<!--注册-->
+					<li class="reg_register">
+						<ul class="reg_select">
+							<li class="cur"><a>普通会员注册</a></li>
+							<li><a>批发会员注册</a></li>
+						</ul>
+						<ul class="reg_frm">
+							<li class="register_pt">
+								<form method="post" name="regform">
+									<div class="pop_register_form">
+										<div class="pop_register_input">
+											<div class="pop_register_item">	
+												<input type="text" name="email" value="" maxlength="30" class="txtgb" placeholder="电子邮件"/>
+												<div class="txt_error">
+													
+												</div>
+											</div>
+											<div class="pop_register_item">
+												<div>
+													<input type="password" name="pass" id="" value="" class="pwdbg" placeholder="您的密码"/>
+												</div>
+												<div>
+													<input type="password" name="reg_pass" id="" value="" class="reg_pwdbg" placeholder="确认密码"/>
+												</div>
+												<div class="pwd_error">
+													
+												</div>
+											</div>
+											<div class="pop_register_item">
+												<div>
+													<input type="text" name="name" id="" value="" class="namebg" placeholder="用户名"/>
+												</div>
+												<div>
+													<select name="sex" class="selectbg">
+														<!--<option value="">性别</option>-->
+														<option value="F">女</option>
+														<option value="M">男</option>
+													</select>
+												</div>
+												<div class="sex_error">
+													
+												</div>
+											</div>
+											<div class="pop_register_item">
+												<div>
+													<input type="text" name="cphone" id="" value="" class="cphonebg" maxlength="11" placeholder="手机号码"/>
+												</div>
+												<div class="input_code">
+													<span id="" class="safe"></span>
+													<input type="text" name="code" id="" value="" class="codebg" placeholder="验证码"/>
+												</div>
+												<div class="code_error">
+													
+												</div>
+												<div class="phone_error">
+													
+												</div>
+											</div>
+											<div class="pop_register_tip">
+												<div class="agree">
+													<input type="checkbox" name="agreement" id="" value="yes" checked="checked"/> 我已阅读并同意《<a href="#">时尚起义用户使用条款</a>》
+												</div>
+												<div class="pop_login_reg">
+													<a class="login">老用户登录</a>
+												</div>
+											</div>
+										</div>
+										<a class="pop_register_submit">注册<br/><em>(送5元现金)</em></a>
+									</div>
+								</form>
+							</li>
+							<li class="register_wholesale">
+								<div class="wholesale_step">
+									<div>
+										<span>①</span>
+										<strong>填写会员信息</strong>请如实填写信息<br />便于联系
+									</div>
+									<div>
+										<span>②</span>
+										<strong>发送资料</strong>发送身份证、营业执照或店铺地址至<br /><a href="mailto:shishangqiyi_2010@126.com">shishangqiyi_2010@126.com</a> (注明注册ID)
+									</div>
+									<div>
+										<span>③</span>
+										<strong>客服审核</strong>请耐心等待审核<br />审核通过即可登录
+									</div>
+								</div>
+								<form method="post" name="regform_wholesale">
+									<div class="pop_wholesale_input">
+										<div class="emailcheckstr"></div>
+										<div class="pop_wholesale_item">	
+											<input type="text" name="email" value="" maxlength="30" class="txtgb" placeholder="电子邮件"/>
+											<div class="txt_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_item">
+											<div>
+												<input type="password" name="pass" id="" value="" class="pwdbg" placeholder="您的密码"/>
+											</div>
+											<div>
+												<input type="password" name="reg_pass" id="" value="" class="reg_pwdbg" placeholder="确认密码"/>
+											</div>
+											<div class="pwd_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_item">
+											<div>
+												<input type="text" name="name" id="" value="" class="namebg" placeholder="用户名"/>
+											</div>
+											<div>
+												<select name="sex" class="selectbg">
+													<option value="F">女</option>
+													<option value="M">男</option>
+												</select>
+											</div>
+											<div class="sex_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_item">
+											<div>
+												<input type="text" name="cphone" id="" value="" class="cphonebg" maxlength="11" placeholder="手机号码"/>
+											</div>
+											<div class="input_code">
+												<span id="" class="safe"></span>
+												<input type="text" name="code" id="" value="" class="codebg" placeholder="验证码"/>
+											</div>
+											<div class="code_error">
+												
+											</div>
+											<div class="phone_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_item">
+											地区范围
+											<select name="selstate" class="address">
+												<option value="no" selected="selected">请选择</option>
+												<option value="no">---------</option>
+												<option value="广东省">广东省</option>
+												<option value="广西省">广西省</option>
+											</select>
+											<div class="address_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_item">
+											<input type="text" name="detailaddr" id="" value="" class="detailaddrbg" placeholder="您的详细地址"/>
+											<div class="detailaddr_error">
+												
+											</div>
+										</div>
+										<div class="pop_wholesale_tip">
+											<div class="agree">
+												<input type="checkbox" name="agreement" id="" value="yes" checked="checked"/> 我已阅读并同意《<a href="#">时尚起义用户使用条款</a>》
+											</div>
+											<div class="pop_login_reg">
+												<a class="login">老用户登录</a>
+											</div>
+										</div>
+										<div class="pop_wholesale_reg">
+											<a class="pop_wholesale_submit">批发会员注册</a>
+										</div>
+									</div>
+								</form>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

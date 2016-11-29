@@ -1,0 +1,4 @@
+.lzoom{position: relative;}
+.lzoom .lzoom-min{position:absolute;top:0;left:0;width:100px;height:50px;border:1px solid #000000;)}
+.lzoom-big{position:absolute;overflow:hidden;border: 1px solid #000;}
+.lzoom-big img{position:absolute;left:0;top:0;}

@@ -1,0 +1,23 @@
+body,div,code,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,td,textarea,th,ul,a{margin:0;padding:0}
+li,ul{list-style-image:none;list-style-type:none}
+a{font-size:12px;color:#2b2b2b;text-decoration:none}
+a:hover{color:#33b0f0;text-decoration:underline}
+fieldset,img,input{border:0;}
+
+h1{margin-top: 70px;height: 40px;line-height: 40px;text-align: center;}
+.category{margin-top: 30px;border-top: #aeaeae solid 1px; border-bottom: #AEAEAE solid 1px;text-align: center;margin-left: 10px;}
+.category a{display: inline-block;height: 85px;line-height: 85px;padding: 0 24px;background: #F7F7F7;font-size: 16px;margin-right: -1px;border-right: #e7e7e7 solid 1px;border-left: #E7E7E7 solid 1px;color: #888;cursor: auto;}
+.category a.cur,.category a:hover{color: #000;}
+.wraper h2{margin: 60px 0 30px 0;height: 24px;line-height: 24px;font-size: 20px;text-align: center;}
+
+.salelist{margin-left: 10px;width: 1146px;overflow: hidden;}
+.salelist li{float: left;margin: 20px 0;text-align: left;width: 286px;height: 460px;}
+.salelist li a img{margin-bottom: 14px;}
+.salelist li p{display: block;width: 240px;line-height: 18px;font-size: 12px;}
+.salelist li p.GIcon{color: #D8D8D8;font-weight: bold;font-size: 14px;}
+.salelist li p.Gtitle a{color: #999999;margin-top: 5px;}
+.salelist li p.Gname a{color: #000;margin: 10px 0;font-family: 'Exo 2',sans-serif;}
+.salelist li p.Gprice{color: #000;font-size: 14px;margin-top: 11px;}
+
+.tatol{margin-top: 60px;margin-left: 10px;height: 30px;line-height: 30px;font-size: 14px;font-weight: 500;}
+.tatol span{font-size: 18px;margin-right: 5px;}
